@@ -17,6 +17,21 @@ posts = Post.all
     )
 end
 
+unique_post = [
+{title: "A Unique Post",
+body: "A unique body"}]
+
+unique_post.each do |text| 
+  Post.where(text).first_or_create
+  end
+
+unique_comment = [
+{body: "A Unique Comment"}]
+
+unique_comment.each do |comment|
+  Comment.where(comment).first_or_create
+end
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
