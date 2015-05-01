@@ -26,7 +26,7 @@ unique_post.each do |text|
   end
 
 unique_comment = [
-{body: "A Unique Comment"}]
+{body: "A Unique Comment", post: posts.sample}]
 
 unique_comment.each do |comment|
   Comment.where(comment).first_or_create
