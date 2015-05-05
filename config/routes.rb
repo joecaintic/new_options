@@ -6,6 +6,8 @@ resources :topics do
   resources :posts, except: [:index]
 end
 
+resources :summaries
+
   get 'about' => 'welcome#about'
 
 root to: 'welcome#index'

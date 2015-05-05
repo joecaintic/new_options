@@ -11,6 +11,7 @@ group :production do
  
  group :development do
    gem 'sqlite3'
+   gem 'annotate'
  end
 # Use SCSS for stylesheets
 gem 'bootstrap-sass'
@@ -31,6 +32,7 @@ gem 'jquery-rails'
 gem 'faker'
 gem 'devise'
 gem 'pundit'
+gem 'annotate'
 gem 'figaro', '1.0'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

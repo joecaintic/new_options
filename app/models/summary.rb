@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: topics
+# Table name: summaries
 #
 #  id          :integer          not null, primary key
 #  name        :string
@@ -10,7 +10,6 @@
 #  updated_at  :datetime         not null
 #
 
-class Topic < ActiveRecord::Base
-
-  has_many :posts
+class Summary < ActiveRecord::Base
+belongs_to :post
 end
