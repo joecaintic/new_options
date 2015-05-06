@@ -16,8 +16,8 @@
     <% end %>
   </div>
   <div class="col-md-4">
-    <% if policy(Summary.new).create? %>
-      <%= link_to "New Summary", new_summary_path, class: 'btn btn-success' %>
+    <% if policy(Topic.new).create? %>
+      <%= link_to "New Topic", new_topic_path, class: 'btn btn-success' %>
     <% end %>
   </div>
 </div>

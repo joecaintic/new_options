@@ -9,13 +9,12 @@
 #  updated_at :datetime         not null
 #  user_id    :integer
 #  topic_id   :integer
-#  summary_id :integer
+#  image      :string
 #
 # Indexes
 #
-#  index_posts_on_summary_id  (summary_id)
-#  index_posts_on_topic_id    (topic_id)
-#  index_posts_on_user_id     (user_id)
+#  index_posts_on_topic_id  (topic_id)
+#  index_posts_on_user_id   (user_id)
 #
 
 class Post < ActiveRecord::Base

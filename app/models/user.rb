@@ -21,6 +21,7 @@
 #  confirmation_sent_at   :datetime
 #  unconfirmed_email      :string
 #  role                   :string
+#  avatar                 :string
 #
 # Indexes
 #

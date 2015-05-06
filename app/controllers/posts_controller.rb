@@ -1,5 +1,10 @@
 class PostsController < ApplicationController
 
+  def index
+    @summaries = Summary.all
+    authorize @summaries
+  end
+  
   def show
     @post = Post.find(params[:id])
     @topic = Topic.find(params[:topic_id])

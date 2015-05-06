@@ -8,8 +8,13 @@
 #  description :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  post_id     :integer
+#
+# Indexes
+#
+#  index_summaries_on_post_id  (post_id)
 #
 
 class Summary < ActiveRecord::Base
-belongs_to :post
+  belongs_to :post
 end
