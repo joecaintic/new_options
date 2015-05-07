@@ -37,7 +37,10 @@ ActiveRecord::Schema.define(version: 20150506165119) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.integer  "topic_id"
+<<<<<<< HEAD
     t.integer  "summary_id"
+=======
+>>>>>>> checkpoint-16-pagination
     t.string   "image"
   end
 
@@ -69,8 +72,16 @@ ActiveRecord::Schema.define(version: 20150506165119) do
     t.text     "description"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+<<<<<<< HEAD
   end
 
+=======
+    t.integer  "post_id"
+  end
+
+  add_index "summaries", ["post_id"], name: "index_summaries_on_post_id"
+
+>>>>>>> checkpoint-16-pagination
   create_table "topics", force: :cascade do |t|
     t.string   "name"
     t.boolean  "public",      default: true

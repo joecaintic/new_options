@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: topics
+# Table name: summaries
 #
 #  id          :integer          not null, primary key
 #  name        :string
@@ -8,9 +8,13 @@
 #  description :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  post_id     :integer
+#
+# Indexes
+#
+#  index_summaries_on_post_id  (post_id)
 #
 
-class Topic < ActiveRecord::Base
-
-  has_many :posts
+class Summary < ActiveRecord::Base
+  belongs_to :post
 end

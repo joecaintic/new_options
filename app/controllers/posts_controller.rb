@@ -1,5 +1,10 @@
 class PostsController < ApplicationController
 
+  def index
+    @summaries = Summary.all
+    authorize @summaries
+  end
+  
   def show
     @post = Post.find(params[:id])
     @topic = Topic.find(params[:topic_id])
@@ -13,7 +18,11 @@ class PostsController < ApplicationController
 
   def create
     @topic = Topic.find(params[:topic_id])
+<<<<<<< HEAD
     @post = current_user.posts.build(post_params)
+=======
+    @post = current_user.posts.build(params.require(:post).permit(:title, :body))
+>>>>>>> checkpoint-16-pagination
     @post.topic = @topic
     authorize @post
     if @post.save
