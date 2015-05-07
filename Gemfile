@@ -34,6 +34,7 @@ gem 'devise'
 gem 'pundit'
 gem 'annotate'
 gem 'figaro', '1.0'
+gem 'will_paginate', '~> 3.0.5'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
