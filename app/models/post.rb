@@ -9,6 +9,7 @@
 #  updated_at :datetime         not null
 #  image      :string
 #  topic_id   :integer
+#  user_id    :integer
 #
 # Indexes
 #
