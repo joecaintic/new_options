@@ -6,8 +6,8 @@
 #  name        :string
 #  public      :boolean          default(TRUE)
 #  description :text
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 class Topic < ActiveRecord::Base

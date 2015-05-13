@@ -8,13 +8,10 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
-<<<<<<< HEAD
-=======
 # Indexes
 #
 #  index_comments_on_post_id  (post_id)
 #
->>>>>>> checkpoint-16-pagination
 
 class Comment < ActiveRecord::Base
   belongs_to :post

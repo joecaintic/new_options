@@ -9,9 +9,6 @@ resources :topics do
   end
 end
 
-resources :posts, only: [:index] do
-  
-end
 
 
 get 'about' => 'welcome#about'
