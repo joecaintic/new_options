@@ -30,4 +30,6 @@ class Post < ActiveRecord::Base
     validates :topic, presence: true
     validates :user, presence: true
 
+    # self.per_page = 100
+
 end

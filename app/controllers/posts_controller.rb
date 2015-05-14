@@ -50,6 +50,10 @@ class PostsController < ApplicationController
     end
   end
 
+  # def per_page(num)
+  #   Post.order('created_at DESC').page(params[:page]).per_page(num)
+  # end
+
   private
 
 def post_params
