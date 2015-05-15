@@ -1,7 +1,7 @@
 require 'faker'
 
  # Create Topics
-1000.times do
+10.times do
   Topic.create!(
     name:          Faker::Lorem.sentence,
    description:   Faker::Lorem.paragraph
@@ -32,7 +32,7 @@ users = User.all
 
 
  # Create Posts
-10000.times do
+10.times do
   Post.create!(
     user:  users.sample,
     topic: topics.sample, 
@@ -43,24 +43,24 @@ end
 posts = Post.all
 
 # Create Comments
-10000.times do
+10.times do
   Comment.create!(
-    # user:  users.sample, # we have not yet associated Users with Comments
+    user:  users.sample, # we have not yet associated Users with Comments
     post: posts.sample,
     body: Faker::Lorem.paragraph
     )
 end
 
 # Create an admin user
-#admin = User.new(
- # name:       'Admin User',
- # email:      'admin@example.com',
- # password:   'helloworld',
-#  role:       'admin'
- # )
+admin = User.new(
+  name:       'Admin User',
+  email:      'admin@example.com',
+  password:   'helloworld',
+  role:       'admin'
+  )
 
-#admin.skip_confirmation!
-#admin.save!
+admin.skip_confirmation!
+admin.save!
 
 # Create a moderator
 #moderator = User.new(

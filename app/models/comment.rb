@@ -7,12 +7,18 @@
 #  post_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  user_id    :integer
 #
 # Indexes
 #
 #  index_comments_on_post_id  (post_id)
+#  index_comments_on_user_id  (user_id)
 #
 
 class Comment < ActiveRecord::Base
   belongs_to :post
+  belongs_to :user
+
+  validates :body, length: { minimum: 5 }, presence: true
+    validates :user, presence: true
 end
