@@ -4,8 +4,6 @@
 #
 #  id         :integer          not null, primary key
 #  value      :integer
-#  user_id_id :integer
-#  post_id_id :integer
 #  user_id    :integer
 #  post_id    :integer
 #  created_at :datetime         not null
@@ -13,8 +11,6 @@
 #
 # Indexes
 #
-#  index_votes_on_post_id_id  (post_id_id)
-#  index_votes_on_user_id_id  (user_id_id)
 #  index_votes_on_post_id  (post_id)
 #  index_votes_on_user_id  (user_id)
 #
