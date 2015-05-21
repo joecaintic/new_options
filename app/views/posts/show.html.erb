@@ -34,6 +34,7 @@
       </div>
       
   </div>
+  <%= render partial: 'favorites/favorite', locals: { post: @post } %>
   <div class="col-md-4">
      <% if policy(Comment.new).create? %>
        <%= render partial: '/comments/form', locals: { post: @post, comment: @comment } %>
