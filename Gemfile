@@ -16,6 +16,7 @@ group :production do
 
  group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
 end
 # Use SCSS for stylesheets
 gem 'bootstrap-sass'
