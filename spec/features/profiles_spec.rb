@@ -24,4 +24,31 @@ describe "Visiting profiles" do
     end
 
   end
+
+  describe "signed in" do
+    before do
+      visit root_path
+
+      within '.user-info' do
+       click_link 'Sign In'
+      end
+      fill_in 'Email', with: @user.email
+      fill_in 'Password', with: @user.password
+
+      within 'form' do
+        click_button 'Sign in'
+      end
+    end
+
+    it "shows user's own profile" do
+        visit user_path(@user)
+      expect(current_path).to eq(user_path(@user))
+
+      expect( page ).to have_content(@user.name)
+       expect( page ).to have_content(@post.title)
+       expect( page ).to have_content(@comment.body)
+    end
+
+  end
+
 end
