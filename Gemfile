@@ -71,5 +71,10 @@ group :development, :test do
   gem 'spring'
 
   gem 'newrelic_rpm'
+
+  gem 'puma', group: :production
+gem 'puma', group: :development
+
+
 end
 
