@@ -8,6 +8,10 @@
       <% end %>
       <div class="media-body">
         <h2 class="media-heading"><%= @user.name %></h2>
+               <small>
+           <%= pluralize(@user.posts.count, 'post') %>,
+           <div class='js-comments-count'><%= pluralize(@user.comments.count, 'comment') %></div>
+       </small>
           <div class="row">
    <div class="tabbable tabs-left">
      <ul class="nav nav-tabs">
@@ -34,3 +38,4 @@
  
  <h2>Comments</h2>
  <%= render @comments %>
+
