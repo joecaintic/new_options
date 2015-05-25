@@ -15,7 +15,9 @@
         </div>
       </div>
         <div class="col-md-8">
+          <div class='js-comments'>
     <%= render partial: 'comments/comment', collection: @comments %>
+  </div>
   </div>
   <div class="col-md-4">
     <% if policy(@post).edit? %>
@@ -36,8 +38,10 @@
   </div>
   <%= render partial: 'favorites/favorite', locals: { post: @post } %>
   <div class="col-md-4">
+    <div class='new-comment'>
      <% if policy(Comment.new).create? %>
        <%= render partial: '/comments/form', locals: { post: @post, comment: @comment } %>
      <% end %>
+   </div>
    </div>
 </div>
