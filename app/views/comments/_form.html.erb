@@ -8,9 +8,9 @@
         <% end %>
       </ul>
     </div>
-    <% end %>
+  <% end %>
 
-    <div class="form-inline">
+  <div class="form-inline">
     <%= form_group_tag(comment.errors[:body]) do %>
       <%= f.label :body %>
       <%= f.text_field :body, class: 'form-control'%>
@@ -20,4 +20,4 @@
       <%= f.submit "Comment", class: 'btn btn-default' %>
     </div>
   </div>
-  <% end %>
+<% end %>
